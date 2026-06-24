@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fight Night | Portfolio</title>
+
+    <link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header class="project-header">
+
+    <a href="../index.html">← Back to Home</a>
+
+    <h1>Fight Night</h1>
+
+    <h2>Unreal Engine 5 | C++ | Multiplayer | AI</h2>
+
+    <p class="summary">
+        Two-player cooperative fighting game where each player controls part of a single fighter.
+        Built to explore multiplayer architecture, replicated gameplay systems, and AI-driven combat.
+    </p>
+
+    <div class="links">
+        <a href="https://youtu.be/QqGXax4zuXY" target="_blank">Video Demo</a>
+        |
+        <a href="https://github.com/yooooop/Seattle" target="_blank">GitHub</a>
+    </div>
+
+</header>
+
+<hr>
+
+<section class="grid">
+
+    <div class="card">
+
+        <h2>Core Concept</h2>
+
+        <p>
+            Fight Night splits control of a single fighter between two players:
+            movement (legs) and combat (arms). Success depends on coordination,
+            timing, and shared decision-making.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Multiplayer System</h2>
+
+        <ul>
+            <li>Server-authoritative architecture</li>
+            <li>Replicated movement, combat, and health systems</li>
+            <li>Two independent input streams controlling one pawn</li>
+            <li>Validated attack and damage execution on server</li>
+        </ul>
+
+    </div>
+
+    <div class="card">
+
+        <h2>AI System</h2>
+
+        <ul>
+            <li>Utility-based decision system</li>
+            <li>Dynamic evaluation of distance and combat state</li>
+            <li>Shared combat logic with player systems</li>
+        </ul>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Architecture</h2>
+
+        <ul>
+            <li>Separation of movement and combat modules</li>
+            <li>Event-driven combat pipeline</li>
+            <li>Replication-driven gameplay state sync</li>
+            <li>Shared systems between AI and players</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h2>Gameplay Demo</h2>
+
+    <iframe width="100%" height="500"
+        src="https://www.youtube.com/embed/QqGXax4zuXY"
+        frameborder="0"
+        allowfullscreen>
+    </iframe>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h2>AI System</h2>
+
+    <p>
+        Utility-based AI system used to control opponent behavior dynamically based on distance,
+        aggression level, and combat state evaluation.
+    </p>
+
+    <div class="media-grid">
+
+        <div class="media-card">
+            <h3>Behavior Tree</h3>
+            <img src="../assets/images/behavior-tree.png" alt="AI Behavior Tree" />
+        </div>
+
+        <div class="media-card">
+            <h3>AI Parameters</h3>
+            <img src="../assets/images/ai-parameters.png" alt="AI Parameters" />
+        </div>
+
+    </div>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h2>Networking Overview</h2>
+
+    <p>
+        Server-authoritative architecture ensures all combat outcomes are validated on the server,
+        with replicated movement and attack events synchronized across clients.
+    </p>
+
+    <div class="media-card full">
+
+        <h3>Replication Flow</h3>
+        <img src="../assets/images/network-flow.png" alt="Networking Flow Diagram" />
+
+    </div>
+
+</section>
+
+<hr>
+
+<section>
+
+    <h2>Gameplay Clips</h2>
+
+    <div class="media-card full">
+
+        <iframe width="100%" height="500"
+            src="https://www.youtube.com/embed/QqGXax4zuXY"
+            frameborder="0"
+            allowfullscreen>
+        </iframe>
+
+    </div>
+
+</section>
+
+<hr>
+
+<footer>
+    <p>© Aaron Lee</p>
+</footer>
+
+</body>
+
+</html>
