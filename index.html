@@ -4,142 +4,379 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aaron Lee | Gameplay & UI Software Engineer</title>
+    <title>Yoohyup Lee | Gameplay & UI Software Engineer</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header class="hero">
+<header class="hero-section">
 
-    <h1>Aaron Lee</h1>
+    <div class="hero-grid">
 
-    <h2>Gameplay & UI Software Engineer</h2>
+        <!-- LEFT SIDE -->
+        <div class="hero-left">
 
-    <p class="summary">
-        Computer Science graduate from the University of Waterloo with experience building gameplay,
-        UI, AI, and networking systems in Unreal Engine and Unity across AAA and indie studios.
-    </p>
+            <h1>Yoohyup Lee</h1>
 
-    <section class="about">
+            <h2>Gameplay & UI Software Engineer</h2>
 
-    <h2>About Me</h2>
+            <p class="hero-skills">
+                Unreal Engine • Unity • Multiplayer Networking • AI Systems • Gameplay Programming
+            </p>
 
-    <p>
-        I am a gameplay and UI software engineer focused on building interactive systems in Unreal Engine and Unity.
-        My work spans multiplayer networking, AI-driven gameplay systems, and modular character control architectures.
-    </p>
+            <img src="assets/images/me.jpg" class="hero-image" alt="Profile Picture">
 
-    <p>
-        I enjoy working on systems where design and engineering intersect, particularly gameplay mechanics that require
-        tight synchronization between player input, simulation logic, and networked state.
-    </p>
+        </div>
 
-    <p>
-        My recent work has focused on multiplayer gameplay architecture, including server-authoritative combat systems
-        and AI opponents built using utility-based decision frameworks.
-    </p>
+        <!-- RIGHT SIDE -->
+        <div class="hero-right">
 
-</section>
+            <h2>About Me</h2>
 
-    <div class="links">
-        <a href="assets/resume/AaronLeeResume.pdf" target="_blank">Resume</a>
-        <a href="https://github.com/yooooop" target="_blank">GitHub</a>
-        <a href="#" target="_blank">LinkedIn</a>
+            <p>
+                Hello! I'm Yoohyup (pronounced you + yup with an h)! 
+            </p>
+
+            <p>
+                I just graduated from University of Waterloo with a 
+                Bachelor's degree in comptuer science with a bioinformatics specialization and have a passion in making 
+                games. I love learning about anything that goes into making video games but I specialize in UI/UX and gameplay.
+                But I've been touching on in-game AI and network/multiplayer aspects on my WIP project, Fight Night. 
+            </p>
+
+            <p>
+                Thanks for taking the time to drop by and feel free to check out some projects I've done and am currently working on below!
+            </p>
+
+            <div class="hero-contact">
+
+                <a href="mailto:y342lee@uwaterloo.ca">
+                    📧 y342lee@uwaterloo.ca
+                </a>
+
+                <span>•</span>
+
+                <a href="tel:+1 (647) 637-2030">
+                    📞 +1 (647) 637-2030
+                </a>
+
+            </div>
+
+            <div class="hero-links">
+
+                <a href="https://github.com/yooooop" target="_blank">GitHub</a>
+                |
+                <a href="https://www.linkedin.com/in/yoohyup-lee-848a4423a/" target="_blank">LinkedIn</a>
+                |
+                <a href="assets/resume/Resume Yoohyup Lee.pdf" target="_blank">Resume</a>
+
+            </div>
+
+            
+        </div>
+
     </div>
 
 </header>
 
-<hr>
+<section class="projects-section">
 
-<section>
+    <h2>Projects</h2>
 
-    <h2>Featured Project</h2>
+    <div class="projects-grid">
 
-    <div class="featured">
+        <!-- FEATURED -->
+        <div class="project-card featured"
+             id="featured-card"
+             onmouseenter="playPreview(this)"
+             onmouseleave="pausePreview(this)"
+             onclick="openFeaturedModal()">
 
-        <h3>Fight Night</h3>
+            <img class="project-bg static" id="featured-img">
+            <img class="project-bg hover" id="featured-gif">
 
-        <p>
-            Two-player cooperative fighting game built in Unreal Engine 5 using C++.
-            Features server-authoritative networking, replicated gameplay systems,
-            and a utility-based AI opponent.
-        </p>
+            <div class="project-overlay">
+                <h3 id="featured-title">Fight Night</h3>
+                <p id="featured-desc"></p>
+                <p><strong>Click for Video/Link to the Repository!</strong></p>
+            </div>
 
-        <div class="links">
-            <a href="projects/fight_night.html">View Project →</a>
-            |
-            <a href="https://youtu.be/QqGXax4zuXY" target="_blank">Video Demo</a>
-            |
-            <a href="https://github.com/yooooop/Seattle" target="_blank">GitHub</a>
+        </div>
+
+        <!-- SIDE LIST -->
+        <div class="project-side">
+
+            <div class="project-card square"
+                 onclick="setActiveProject('fightnight', this)">
+                <h3>Fight Night</h3>
+                <p>Focus on Multiplayer Synchronization and AI!</p>
+            </div>
+
+            <div class="project-card square"
+                 onclick="setActiveProject('nutri', this)">
+                <h3>Nutri</h3>
+                <p>Focus on UI/UX</p>
+            </div>
+
+            <div class="project-card square"
+                 onclick="setActiveProject('eye', this)">
+                <h3>Eye for an Eye</h3>
+                <p>Focus on Gameplay and AI</p>
+            </div>
+
+            <div class="project-card square"
+                 onclick="setActiveProject('rhythm', this)">
+                <h3>Rhythm</h3>
+                <p>Focus on Gameplay and Timing</p>
+            </div>
+
+            <div class="project-card square"
+                 onclick="setActiveProject('bio', this)">
+                <h3>Bioinformatics</h3>
+                <p>Focus on Machine Learning</p>
+            </div>
+
         </div>
 
     </div>
 
 </section>
-
-<hr>
 
 <section>
 
     <h2>Experience</h2>
 
-    <div class="experience">
+    <div class="expandable-card">
 
-        <p><strong>Electronic Arts – Motive Studio</strong> | UI Software Engineer</p>
-        <p><strong>Digital Extremes</strong> | Gameplay Programmer</p>
-        <p><strong>Behaviour Interactive</strong> | Gameplay Programmer</p>
-        <p><strong>Campfire Expeditions</strong> | Full-Stack Developer</p>
-        <p><strong>ZeMind Studios</strong> | Unity / VR Developer</p>
+        <button class="expand-btn">
+
+            <div class="expand-summary">
+
+                <h3>Electronic Arts – Motive Studios</h3>
+
+                <p>
+                    Software Engineer • May 2025 – Dec 2025
+                </p>
+
+            </div>
+
+            <span class="expand-arrow">▼</span>
+
+        </button>
+
+        <div class="expand-content">
+
+            <p>
+                Contributed to the development of the upcoming Iron Man title in Unreal Engine 5.
+            </p>
+
+            <ul>
+                <li>Implemented UI systems for armor selection and flight mechanics.</li>
+                <li>Integrated telemetry events used for automated gameplay data collection.</li>
+                <li>Designed and developed internal ImGui tools for programmers and animators.</li>
+                <li>Implemented bone-highlighting visualization tools to improve debugging workflows.</li>
+            </ul>
+
+            <p>
+                <strong>Technologies:</strong> Unreal Engine 5, C++, ImGui
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="expandable-card">
+
+        <button class="expand-btn">
+
+            <div class="expand-summary">
+
+                <h3>Digital Extremes</h3>
+
+                <p>
+                    Gameplay Programmer • Jan 2024 – Apr 2024
+                </p>
+
+            </div>
+
+            <span class="expand-arrow">▼</span>
+
+        </button>
+
+        <div class="expand-content">
+
+            <ul>
+                <li>Implemented gameplay ability improvements using C++ and Lua.</li>
+                <li>Applied kinematic equations to calculate projectile trajectories and parabolic motion.</li>
+                <li>Developed enemy AI using behavior trees and decision logic.</li>
+                <li>Added new melee attacks and resolved pathfinding and idle-state issues.</li>
+            </ul>
+
+            <p>
+                <strong>Technologies:</strong> C++, Lua, AI Systems, Gameplay Programming
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="expandable-card">
+
+        <button class="expand-btn">
+
+            <div class="expand-summary">
+
+                <h3>Campfire Expeditions</h3>
+
+                <p>
+                    Full-Stack Software Engineer • Sept 2024 – Dec 2024
+                </p>
+
+            </div>
+
+            <span class="expand-arrow">▼</span>
+
+        </button>
+
+        <div class="expand-content">
+
+            <ul>
+                <li>Implemented backend endpoints and cloud functions using Cloud Firestore.</li>
+                <li>Developed in-game notification systems using Firebase Notifications.</li>
+                <li>Contributed to shipping Campfire: Cozy Friends from closed beta to Steam Next Fest.</li>
+                <li>Helped support a 12% player increase during the event period.</li>
+            </ul>
+
+            <p>
+                <strong>Technologies:</strong> Firebase, Cloud Firestore, Backend Development
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="expandable-card">
+
+        <button class="expand-btn">
+
+            <div class="expand-summary">
+
+                <h3>ZeMind Studios</h3>
+
+                <p>
+                    Mobile Game / VR / App Developer • Sept 2023 – Dec 2023
+                </p>
+
+            </div>
+
+            <span class="expand-arrow">▼</span>
+
+        </button>
+
+        <div class="expand-content">
+
+            <ul>
+                <li>Developed VR motion-tracking systems in Unity using C#.</li>
+                <li>Implemented UI systems for VR simulation software.</li>
+                <li>Resolved issues using log analysis and Jenkins test reports.</li>
+                <li>Integrated subscription workflows into a VR meditation application.</li>
+            </ul>
+
+            <p>
+                <strong>Technologies:</strong> Unity, C#, Jenkins, VR Development
+            </p>
+
+        </div>
+
+    </div>
+
+    <div class="expandable-card">
+
+        <button class="expand-btn">
+
+            <div class="expand-summary">
+
+                <h3>Behaviour Interactive</h3>
+
+                <p>
+                    Gameplay Software Engineer • Sept 2022 – Dec 2022
+                </p>
+
+            </div>
+
+            <span class="expand-arrow">▼</span>
+
+        </button>
+
+        <div class="expand-content">
+
+            <ul>
+                <li>Implemented gameplay mechanics for an unannounced multiplayer title.</li>
+                <li>Developed modular weapon systems using reusable gameplay architecture.</li>
+                <li>Implemented a spherical camera system using vector mathematics and trigonometry.</li>
+                <li>Collaborated with designers and gameplay engineers on multiplayer features.</li>
+            </ul>
+
+            <p>
+                <strong>Technologies:</strong> C++, Multiplayer Systems, Gameplay Programming
+            </p>
+
+        </div>
 
     </div>
 
 </section>
-
-<hr>
-
-<section>
-
-    <h2>Projects</h2>
-
-    <div class="project-grid">
-
-        <div class="project-card">
-            <h3>Nutri</h3>
-            <p>Kotlin Android app with AWS barcode scanning and LLM-based dietary analysis.</p>
-            <a href="projects/nutri.html">View →</a>
-        </div>
-
-        <div class="project-card">
-            <h3>Rhythm</h3>
-            <p>Unity rhythm-based boss fight game built in a one-week game jam.</p>
-            <a href="projects/rhythm.html">View →</a>
-        </div>
-
-    </div>
-
-</section>
-
-<hr>
 
 <section>
 
     <h2>Technical Skills</h2>
 
-    <p>
-        Unreal Engine • Unity • C++ • C# • AI • Networking • Gameplay Systems •
-        AWS • Git • Perforce • Jenkins • OpenGL
-    </p>
+    <div class="skills-container">
+
+    <div class="skill-chip">Unreal Engine</div>
+    <div class="skill-chip">Unity</div>
+    <div class="skill-chip">C++</div>
+    <div class="skill-chip">C#</div>
+    <div class="skill-chip">Python</div>
+    <div class="skill-chip">AI</div>
+    <div class="skill-chip">Networking</div>
+    <div class="skill-chip">Gameplay Systems</div>
+    <div class="skill-chip">AWS</div>
+    <div class="skill-chip">Git</div>
+    <div class="skill-chip">Perforce</div>
+    <div class="skill-chip">Jenkins</div>
+    <div class="skill-chip">OpenGL</div>
+
+</div>
 
 </section>
 
 <hr>
 
 <footer>
-    <p>© Aaron Lee</p>
+    <p>© Yoohyup Lee</p>
 </footer>
+
+<!-- MODAL BACKDROP -->
+<div id="modal-backdrop" class="modal-backdrop" onclick="closeModal()"></div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <span class="close-btn" onclick="closeModal()">×</span>
+
+        <div id="modal-body"></div>
+
+    </div>
+
+</div>
 
 </body>
 
 </html>
+
+<script src="script.js"></script>
