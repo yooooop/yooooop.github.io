@@ -161,6 +161,37 @@ function openModal(project) {
         `;
     }
 
+    else if (project === "golf") {
+        content = `
+            <h2>Puttzzle</h2>
+
+            <p>
+                Sliding Puzzle Mini Golf Game
+            </p>
+
+            <div class="modal-video">
+                <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube.com/embed/an7OpUbuzUU?si=1Gg_2RGhS-3F_gu5"
+                    title="Eye for an Eye"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerpolicy="strict-origin-when-cross-origin"
+                    allowfullscreen>
+                </iframe>
+            </div>
+
+            <div class="modal-links">
+                <a href="https://github.com/yooooop/Niagara"
+                target="_blank">
+                    View GitHub Repository
+                </a>
+            </div>
+        `;
+    
+    }
+
     modalBody.innerHTML = content;
 
     modal.classList.add("active");
