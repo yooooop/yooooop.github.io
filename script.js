@@ -221,6 +221,12 @@ function pausePreview(card) {
 }
 
 const projects = {
+    golf: {
+        title: "Puttzzle",
+        desc: "A Sliding Puzzle MiniGolf Game, a blend between your classic sliding puzzles and mini golf!",
+        img: "assets/projects/thumbPZ.jpg",
+        gif: "assets/projects/hoverPZ.gif"
+    },
     fightnight: {
         title: "Fight Night",
         desc: "A Co-Op Fighthing Game where each player takes control of separate body parts.\nWork together to defeat a live behaviour changing AI!",
@@ -256,7 +262,7 @@ const projects = {
 let currentProject = "fightnight";
 
 window.addEventListener("DOMContentLoaded", () => {
-    setActiveProject("fightnight");
+    setActiveProject("golf");
 });
 
 function setActiveProject(id, element) {
